@@ -34,11 +34,12 @@
   appendMomiji = function() {
     var maple;
     return maple = {
-      elem: $('<div class="maple">').appendTo($('body').css({
+      elem: $('<div class="maple">').css({
         position: "absolute",
         top: Math.random() * $(window).height(),
-        left: Math.random() * $(window).width()
-      })),
+        left: Math.random() * $(window).width(),
+        transform: "rotate(" + (Math.random() * 360) + "deg)"
+      }).appendTo($('body')),
       speedX: Math.random(),
       speedY: Math.random() * 3
     };
