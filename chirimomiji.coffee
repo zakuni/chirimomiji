@@ -19,11 +19,11 @@ updatePosition = (maple) ->
 appendMomiji = ->
   maple = 
     elem : $('<div class="maple">')
-      .width(Math.random()*10+15)
-      .height(Math.random()*5+15)
+      # .width(Math.random()*10+15)
+      # .height(Math.random()*5+15)
       .appendTo $('body')
       .css
-        position: "relative",
+        position: "absolute",
         top: Math.random() * $(window).height(),
         left: Math.random() * $(window).width()
     speedX : Math.random()
