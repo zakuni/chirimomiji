@@ -46,7 +46,7 @@
   };
 
   $(function() {
-    var maples;
+    var i, maple, maples, _i, _len;
     maples = (function() {
       var _i, _results;
       _results = [];
@@ -55,6 +55,12 @@
       }
       return _results;
     })();
+    for (i = _i = 0, _len = maples.length; _i < _len; i = ++_i) {
+      maple = maples[i];
+      if (i % 3 === 0) {
+        maple.elem.addClass("yellow");
+      }
+    }
     return requestAnimationFrame(function() {
       return flutterDown(maples);
     });

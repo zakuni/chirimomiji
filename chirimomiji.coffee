@@ -30,5 +30,7 @@ appendMomiji = ->
 
 $ ->
   maples = (appendMomiji() for [1..20])
+  for maple, i in maples
+    maple.elem.addClass("yellow") if i%3==0
   requestAnimationFrame ->
     flutterDown(maples)
