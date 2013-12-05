@@ -1,0 +1,55 @@
+/* line 3, ../sass/main.sass */
+body {
+  background-color: #ffaa77;
+  overflow: hidden;
+}
+
+/* line 7, ../sass/main.sass */
+.maple {
+  background: #ff4433;
+  width: 30px;
+  height: 30px;
+  border-radius: 100% 1%/100% 1%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 14, ../sass/main.sass */
+.maple::before {
+  position: absolute;
+  content: "";
+  background: #ff4433;
+  width: 20px;
+  height: 30px;
+  border-radius: 100% 1%/100% 1%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 23, ../sass/main.sass */
+.maple::after {
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  content: "";
+  background: #ff4433;
+  width: 20px;
+  height: 35px;
+  border-radius: 100% 1%/100% 1%;
+  -webkit-transform: rotate(80deg);
+  -moz-transform: rotate(80deg);
+  -ms-transform: rotate(80deg);
+  -o-transform: rotate(80deg);
+  transform: rotate(80deg);
+}
+
+/* line 34, ../sass/main.sass */
+.yellow, .yellow::before, .yellow::after {
+  background: #ffff55;
+}
