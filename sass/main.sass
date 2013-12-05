@@ -1,3 +1,5 @@
+@import "compass"
+
 body
   background-color: #ffaa77
   overflow: hidden
@@ -6,9 +8,8 @@ body
   background: #ff4433
   width: 30px
   height: 30px
-  border-radius: 100% 1% / 100% 1%
-  transform: rotate(-45deg)
-  -webkit-transform: rotate(-45deg)
+  border-radius: 100% 1% / 100% 1%  
+  @include transform(rotate(-45deg))
 
 .maple::before
   position: absolute
@@ -17,8 +18,7 @@ body
   width: 20px
   height: 30px
   border-radius: 100% 1% / 100% 1%
-  transform: rotate(-45deg)
-  -webkit-transform: rotate(-45deg)
+  @include transform(rotate(-45deg))
 
 .maple::after
   position: absolute
@@ -29,8 +29,7 @@ body
   width: 20px
   height: 35px
   border-radius: 100% 1% / 100% 1%
-  transform: rotate(80deg)
-  -webkit-transform: rotate(80deg)
+  @include transform(rotate(80deg))
 
 .yellow, .yellow::before, .yellow::after
   background: #ffff55
