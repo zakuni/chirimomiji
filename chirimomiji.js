@@ -67,3 +67,7 @@
   });
 
 }).call(this);
+
+/*
+//@ sourceMappingURL=chirimomiji.map
+*/
