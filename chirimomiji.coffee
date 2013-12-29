@@ -1,3 +1,13 @@
+$ ->
+  startFlutter(20)
+
+startFlutter = (numberOfMomiji) ->
+  maples = (appendMomiji() for [1..numberOfMomiji])
+  for maple, i in maples
+    maple.elem.addClass("yellow") if i%3==0
+  requestAnimationFrame ->
+    flutterDown(maples)
+
 flutterDown = (maples) ->
   updatePosition(maple) for maple in maples
   requestAnimationFrame ->
@@ -7,8 +17,8 @@ updatePosition = (maple) ->
   offset = maple.elem.offset()
   nextX = offset.left - maple.speedX
   nextY = offset.top + maple.speedY
-  if nextY > $(window).height() or nextX < 0
-    top = 0
+  if nextY > $(window).height() or nextX < 0-maple.elem.width()
+    top = 0-maple.elem.height()
     left = Math.floor(Math.random()*$(window).width())
   else
     top = nextY
@@ -27,10 +37,3 @@ appendMomiji = ->
       .appendTo $('body')        
     speedX : Math.random()
     speedY : Math.random()*3
-
-$ ->
-  maples = (appendMomiji() for [1..20])
-  for maple, i in maples
-    maple.elem.addClass("yellow") if i%3==0
-  requestAnimationFrame ->
-    flutterDown(maples)
