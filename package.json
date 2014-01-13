@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "gulp-util": "~2.2.9",
-    "gulp": "~3.3.1"
+    "gulp": "~3.3.1",
+    "gulp-coffee": "~1.2.5"
   }
 }
