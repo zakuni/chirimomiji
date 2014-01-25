@@ -4,7 +4,7 @@ var coffee = require('gulp-coffee');
 
 gulp.task('coffee', function() {
   gulp.src('*.coffee')
-    .pipe(coffee().on('error', gutil.log))
+    .pipe(coffee({sourceMap: true}).on('error', gutil.log))
     .pipe(gulp.dest('./'))
 });
 

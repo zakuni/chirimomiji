@@ -70,3 +70,7 @@
   };
 
 }).call(this);
+
+/*
+//@ sourceMappingURL=chirimomiji.js.map
+*/
