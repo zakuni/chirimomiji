@@ -9,9 +9,5 @@ gulp.task('coffee', function() {
 });
 
 gulp.task('default', function(){
-  gulp.watch([
-    '*.coffee'
-  ], function(event) {
-    gulp.run('coffee');
-  });
+  gulp.watch(['*.coffee'], ['coffee']);
 });
